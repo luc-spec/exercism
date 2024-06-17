@@ -2,8 +2,6 @@
 #include <stdbool.h>
 #include "string.h"
 #include "stdlib.h"
-#include "stdio.h"
-#include "stdint.h"
 
 /* <Validation> per "Validating a Number" */
 bool disallowed(char suschar){
@@ -17,15 +15,11 @@ bool passes_validation(char* sus){
   for ( int i=strlen(sus)-1; i >= 0; i-- ) {
     if (disallowed(sus[i])){
       no_disallowed_chars_present = false;
-      printf("\nBAD  Char Found: %d", sus[i]);
     } else if (sus[i] == 32) {
       space_count += 1;
-      printf("\nGood Char Found: [SPACE]");
     } else {
-      printf("\nGood Char Found: %c", sus[i]);
     };
   };
-  printf("\n");
   return  no_disallowed_chars_present && ((strlen(sus)-space_count)>1);
 }
 /* </Validation> per "Validating a Number" */

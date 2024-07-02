@@ -11,6 +11,6 @@
   ;;
   ;; @returns {(i32, i32)} The offset and length of the greeting
   (func (export "hello") (result i32 i32)
-    (i32.const 64) (i32.const 14)
+    (i32.const 64) (i32.const 13)
   )
 )

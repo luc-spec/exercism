@@ -15,7 +15,9 @@
       pkgs.mkShell {
         nativeBuildInputs = with pkgs; [
           exercism
-          python3
+          python312
+          python312Packages.pytest
+          python312Packages.pylint
         ];
       };
   };
